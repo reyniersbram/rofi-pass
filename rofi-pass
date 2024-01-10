@@ -11,5 +11,13 @@ list_passwords() {
     find -L "${PASS_DIR}" -name '*.gpg' | sed "s|$PASS_DIR/\(.*\).gpg|\1|"
 }
 
-list_passwords | _rofi
+copy_to_clipboard() {
+    if [ -z "$1" ]; then
+        exit
+    fi
+    pass show -c "$1" &> /dev/null
 
+}
+
+selected=$(list_passwords | _rofi)
+copy_to_clipboard "$selected"
