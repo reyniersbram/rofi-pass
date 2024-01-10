@@ -1,3 +1,10 @@
 #!/usr/bin/env sh
 
-printf "a\nb\nc\nd" | rofi -dmenu
+PASS_DIR=${PASSWORD_STORE_DIR:-${HOME}/.password-store}
+
+list_passwords () {
+    find -L "${PASS_DIR}" -name '*.gpg' | sed "s|$PASS_DIR/\(.*\).gpg|\1|"
+}
+
+list_passwords | rofi -dmenu
+
