@@ -18,6 +18,20 @@ a complete frontend for pass.
 - [ ] Remove passwords
 - [ ] Autofill
 
+## Installation
+
+```sh
+git clone git@github.com:reyniersbram/rofi-pass.git
+cd rofi-pass
+sudo make install
+```
+
+### Remove rofi-pass
+
+```sh
+sudo make clean
+```
+
 ## Configuration
 
 The program will look for `${XDG_CONFIG_HOME}/rofi-pass.conf` for the 
