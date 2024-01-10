@@ -1,10 +1,14 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 PASS_DIR=${PASSWORD_STORE_DIR:-${HOME}/.password-store}
 
-list_passwords () {
+_rofi() {
+    rofi -dmenu -p "Password"
+}
+
+list_passwords() {
     find -L "${PASS_DIR}" -name '*.gpg' | sed "s|$PASS_DIR/\(.*\).gpg|\1|"
 }
 
-list_passwords | rofi -dmenu
+list_passwords | _rofi
 
