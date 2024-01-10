@@ -34,7 +34,7 @@ sudo make clean
 
 ## Configuration
 
-The program will look for `${XDG_CONFIG_HOME}/rofi-pass.conf` for the 
+The program will look for `$XDG_CONFIG_HOME/rofi-pass.conf` for the 
 configuration file. If it does not exist, it will fall back to 
 `/etc/rofi-pass.conf`. This can also be used as example configuration as it 
 contains all default values.
