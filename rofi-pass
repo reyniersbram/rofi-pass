@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-PASS_DIR=${PASSWORD_STORE_DIR:-${HOME}/.password-store}
+source "default.conf"
+PASS_DIR=${pass_dir:-${PASSWORD_STORE_DIR:-${HOME}/.password-store}}
 
 _rofi() {
     rofi -dmenu -p "Password"
