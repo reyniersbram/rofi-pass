@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Look for config file
-config_file=${XDG_CONFIG_HOME:-${HOME}/.config/rofi-pass.conf}
+config_file="${XDG_CONFIG_HOME:-${HOME}/.config}/rofi-pass.conf"
 if [ -f "$config_file" ]; then
     # shellcheck disable=SC1090
     source "$config_file"
