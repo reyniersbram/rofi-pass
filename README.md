@@ -17,6 +17,7 @@ a complete frontend for pass.
 - [ ] Insert new passwords
 - [ ] Remove passwords
 - [ ] Autofill
+- [ ] Theme customization
 
 ## Installation
 
