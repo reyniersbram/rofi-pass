@@ -30,7 +30,7 @@ sudo make install
 ### Remove rofi-pass
 
 ```sh
-sudo make clean
+sudo make uninstall
 ```
 
 ## Configuration
